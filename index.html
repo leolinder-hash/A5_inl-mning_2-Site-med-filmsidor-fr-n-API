@@ -1,24 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Kino - Uppsala</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <!--Roboto Google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='./src/styles/main.css'>
   <script type="module" src="./src/scripts/main.js"></script>
 
 </head>
 
 <body>
-  <header>
+
+  <header class="header">
+    <!--HEADER MENU SECTION-->
   </header>
 
-  <main>
+  <main class="main">
+    <img class="main__img" src="src/pics/KINO-screen-main.webp" alt="Kino biograf sal">
+
+    <!--FILMS TODAY SECTION FOR CARDS-->
+    <div class="main__filmsToday">
+      <h2 class="main__filmsToday__heading">Filmer idag</h2>
+
+      <a href="#" class="" target="" title=""><button class="btn-main--primary">Alla aktuella filmer</button></a>
+
+    </div>
+
+    <!--WELCOME SECTION-->
+
+    <div class="main__welcome">
+      <h2 class="main__welcome__heading">Välkommenn till oss i Uppsala</h2>
+      <p class="main__welcome__moto">Av filmälskare - för film älskare</p>
+
+      <img class="main__welcome__picture" src="src/pics/KINO-arc.webp" alt="Kino lysande båge">
+      <a href="#" class="" target="" title=""><button class="btn-main--secondary">Mer om oss</button></a>
+
+      <img class="main__welcome__picture" src="src/pics/KINO-bistro.webp" alt="Kino bistro">
+      <a href="#" class="" target="" title=""><button class="btn-main--secondary">Till bistro</button></a>
+
+      <img class="main__welcome__picture" src="src/pics/KINO-cinemahall-seats.webp" alt="Kino biograf sal med bord">
+      <a href="#" class="" target="" title=""><button class="btn-main--secondary">Boka salen</button></a>
+
+      <img class="main__welcome__picture" src="src/pics/KINO-street.webp" alt="Kino utsikt från gatan">
+      <a href="#" class="" target="" title=""><button class="btn-main--secondary">Evenemang hos oss</button></a>
+
+    </div>
+
+    <!--UPCOMING FILMS SECTION FOR CARDS-->
+    <div class="main__filmsUpcoming">
+      <h2 class="main__filmsUpcoming__heading">Kommande filmer</h2>
+
+      <a href="" class="" target="" title=""><button class="btn-main--primary">Alla kommande filmer</button></a>
+
+    </div>
+
   </main>
 
-  <footer>
+  <footer class="footer">
+
   </footer>
 
 </body>
