@@ -9,7 +9,6 @@
     box-sizing: border-box;
     margin: 2rem 1rem;
     text-align: center;
-    border: none;
     text-decoration: none;
     border-radius: 1rem;
     cursor: pointer;
@@ -18,6 +17,7 @@
         border: solid 3px var.$color-red-heading;
         background-color: transparent;
         color: var.$color-red-heading;
+        box-shadow: 0 0 10px rgba(213, 111, 251, 0.4);
 
         &:hover {
             border-color: var.$color-btn-green;
@@ -28,6 +28,8 @@
     &--primary {
         background-color: var.$color-background-dark;
         color: var.$color-red-heading;
+        box-shadow: 0 0 10px rgba(74, 35, 35, 0.8);
+
 
         &:hover {
             color: var.$color-btn-green;
@@ -56,7 +58,7 @@
         }
     }
 
-      &--two {
+    &--two {
         background-color: var.$color-btn-green;
         color: var.$color-background-dark;
 

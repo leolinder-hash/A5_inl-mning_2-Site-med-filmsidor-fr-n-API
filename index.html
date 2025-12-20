@@ -22,8 +22,19 @@
     <button class="btn-menu btn-menu--two">Loga in</button>
   </header>
 
+
   <main class="main">
-    <img class="main__img" src="src/pics/KINO-screen-main.webp" alt="Kino biograf sal">
+    <!--MAIN img-->
+    <!-- <img class="main__img" src="src/pics/KINO-screen-main.webp" alt="Kino biograf sal"> -->
+    <section class="main__video">
+      <div class="main__video__container">
+        <video class="main__img" loop autoplay playsinline poster="src/pics/KINO_hall_preview.jpg"
+          class="main__img" onclick="this.paused ? this.play() : this.pause();">
+          <source src="src/pics/videoKINO_cinema_hall.webm" type="video/webm">
+          <source src="src/pics/videoKINO_empty_cinema_hall.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
 
     <!--FILMS TODAY SECTION FOR CARDS-->
     <div class="main__filmsToday">
