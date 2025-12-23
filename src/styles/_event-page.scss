@@ -10,7 +10,7 @@
 }
 
 .events {
-  background-color: black;
+  background-color: #151313;
   display: flex;
   flex-direction: column;
 
@@ -159,3 +159,25 @@
   -webkit-overflow-scrolling: touch;
 }
 
+@media screen and (min-width: var.$bp-desktop) {
+
+  .events__popular-list,
+  .events__upcoming-list {
+    justify-content: center;
+    overflow-x: visible;
+    gap: 2.5rem;
+  }
+
+  .event-card {
+    flex: 1 1 320px;
+    max-width: 320px;
+  }
+
+  .events__moreBtn {
+    display: block;
+    width: 7rem;
+    margin: 1rem auto 0;
+
+  }
+
+}
