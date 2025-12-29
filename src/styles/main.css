@@ -753,6 +753,10 @@ h2 {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -777,6 +781,8 @@ body {
   border-color: #f3543b;
   height: 3rem;
   width: 10rem;
+  border: 2px solid #f3543b;
+  background-color: #fbfbfa;
   padding: 0;
   margin: 0.5rem;
 }
@@ -848,7 +854,7 @@ body {
   }
 }
 
-.bistro_section, .bistro_gallery, .bistro_description, .bistro_info {
+.bistro_section, .bistro_menu, .bistro_gallery, .bistro_description, .bistro_info {
   max-width: 100%;
   margin: 2rem auto;
   padding: 0 1rem;
@@ -915,7 +921,45 @@ body {
   color: #000000;
   font-size: 0.95rem;
 }
+.bistro_description {
+  /* 
+    @media (min-width: var.$bp-medium) {
+       display: flex;
+       max-width: 800px;
+      padding: 0 1.5rem;
 
+      .bistro_description-grid {
+        grid-template-columns: 1fr 1fr; 
+        gap: 2rem;
+      }
+
+      .bistro_img {
+        height: 100%;
+        border-radius: 16px;
+      }
+
+      .bistro_description-content {
+        padding: 1rem;
+        text-align: left;
+
+        h1 {
+          font-size: 1.9rem;
+        }
+
+        p {
+          font-size: 1.05rem;
+        }
+      } 
+
+      .bistro_description-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        max-width: none;
+      }
+    }
+  */
+}
 
 .bistro_gallery .bistro_gallery-title {
   font-family: "Roboto", sans-serif;
@@ -954,7 +998,58 @@ body {
   transform: scale(2);
   filter: brightness(1);
 }
+
+.bistro_menu {
+  text-align: left;
+}
+.bistro_menu__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #f3543b;
+  text-align: center;
+}
+.bistro_menu__category {
+  margin-bottom: 2rem;
+}
+.bistro_menu__category-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #821818;
+}
+.bistro_menu__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .bistro_menu__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
+}
+.bistro_menu__item {
+  background-color: #fbfbfa;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.12);
+}
+.bistro_menu__item-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #151313;
+}
+.bistro_menu__item-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+.bistro_menu__item-price {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #821818;
 }
 
 /*# sourceMappingURL=main.css.map */

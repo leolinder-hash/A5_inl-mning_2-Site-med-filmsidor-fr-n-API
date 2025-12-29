@@ -1,6 +1,10 @@
 @use 'variables' as var;
 @use 'components';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -24,6 +28,8 @@ body {
       border-color: var.$color-red-heading;
       height: 3rem;
       width: 10rem;
+      border: 2px solid var.$color-red-heading;
+      background-color: var.$color-background-light;
       padding: 0;
       margin: .5rem;
       @media (min-width: var.$bp-medium) {
@@ -269,3 +275,66 @@ body {
       filter: brightness(1);  
     }
   }}
+
+  .bistro_menu {
+  @extend .bistro_section; // if you already use this pattern
+  text-align: left;
+
+  &__title {
+    font-family: var.$font-main;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: var.$color-red-heading;
+    text-align: center;
+  }
+
+  &__category {
+    margin-bottom: 2rem;
+  }
+
+  &__category-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: var.$color-btn-menu;
+  }
+
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+
+    @media (min-width: var.$bp-medium) {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); 
+      gap: 1rem;
+    }
+
+  }
+
+  &__item {
+    background-color: var.$color-background-light;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.12);
+  }
+
+  &__item-name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var.$color-background-dark;
+  }
+
+  &__item-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+    color: #555;
+  }
+
+  &__item-price {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var.$color-btn-menu;
+  }
+}
