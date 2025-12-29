@@ -1,7 +1,7 @@
 @use "variables" as var;
 
 .main.main--contact {
-  background: var.$color-background-dark;
+  background: var.$color-background-light;
   color: var.$color-background-light;
   font-size: 1.5rem;
   min-height: calc(100vh - 18rem);
