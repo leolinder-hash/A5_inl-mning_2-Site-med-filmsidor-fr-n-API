@@ -32,7 +32,7 @@ body {
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.15rem;
     align-items: start;
   }
   &__info,
@@ -140,5 +140,30 @@ body {
       grid-template-columns: 1fr 1fr;
       align-items: start;
     }
+    &__info,
+    &__formwrap {
+      padding: 2rem;
+    }
+    &__input,
+    &__textarea {
+      font-size: 1.05rem;
+    }
+  }
+  @media screen and (min-wdith: var.$bp-desktop) {
+    max-width: 80rem;
+  }
+  &__grid {
+    gap: 2.5rem;
+  }
+  &__title {
+    font-size: 2.5rem;
+  }
+  &__subtitle {
+    font-size: 1.25rem;
+  }
+  &__submit,
+  &__btn {
+    height: 3rem;
+    font-size: 1.35rem;
   }
 }
