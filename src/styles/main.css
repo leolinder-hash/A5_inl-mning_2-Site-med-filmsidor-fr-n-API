@@ -628,7 +628,7 @@ h2 {
   }
 }
 
-.body {
+body {
   margin: 0;
 }
 
@@ -649,6 +649,7 @@ h2 {
 }
 .bistro_buttons .btn--bistro-primary {
   font-size: 1rem;
+  border-color: #f3543b;
   height: 3rem;
   width: 10rem;
   padding: 0;

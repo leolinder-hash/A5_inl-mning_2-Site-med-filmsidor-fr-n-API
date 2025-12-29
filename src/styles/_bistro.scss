@@ -1,7 +1,7 @@
 @use 'variables' as var;
 @use 'components';
 
-.body {
+body {
   margin: 0;
 }
 
@@ -21,6 +21,7 @@
 
     .btn--bistro-primary {
       font-size: 1rem;
+      border-color: var.$color-red-heading;
       height: 3rem;
       width: 10rem;
       padding: 0;
