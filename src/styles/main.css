@@ -534,6 +534,131 @@ h2 {
   }
 }
 
+.about__hero {
+  position: relative;
+}
+.about__hero-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.about__hero-title {
+  position: absolute;
+  transform: translateY(-70px);
+  padding-left: 1em;
+  color: white;
+  font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+  .about__hero-title {
+    font-size: 2.5rem;
+    transform: translateY(-100px);
+  }
+}
+.about__intro {
+  background-color: #fbfbfa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__intro-title {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 0.8rem;
+}
+@media (min-width: 768px) {
+  .about__intro-title {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+  }
+}
+.about__intro-text {
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 0 2rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .about__intro-text {
+    font-size: 1em;
+    padding-bottom: 5rem;
+  }
+}
+@media (min-width: 900px) {
+  .about__intro-text {
+    max-width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  .about__opening-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    justify-content: center;
+  }
+}
+.about__opening-hours {
+  background-color: #151313;
+  padding: 4rem 2rem;
+}
+.about__hours-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .about__hours-title {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.about__cinema-title, .about__bistro-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.about__cinema-hours-list {
+  color: white;
+  list-style: none;
+  padding: 0 0 4rem;
+  line-height: 1.7;
+}
+.about__bistro-hours-list {
+  color: white;
+  list-style: none;
+  padding: 0;
+  line-height: 1.7;
+}
+.about__cinema-img, .about__bistro-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.about__faq {
+  padding: 2rem 2rem;
+  background-color: #fbfbfa;
+}
+.about__faq-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.about__faq-item {
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.about__faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+}
+.about__faq-answer {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
 .footer {
   background-color: #151313;
   padding: 1.825rem;
@@ -790,45 +915,7 @@ body {
   color: #000000;
   font-size: 0.95rem;
 }
-.bistro_description {
-  /* 
-    @media (min-width: var.$bp-medium) {
-       display: flex;
-       max-width: 800px;
-      padding: 0 1.5rem;
 
-      .bistro_description-grid {
-        grid-template-columns: 1fr 1fr; 
-        gap: 2rem;
-      }
-
-      .bistro_img {
-        height: 100%;
-        border-radius: 16px;
-      }
-
-      .bistro_description-content {
-        padding: 1rem;
-        text-align: left;
-
-        h1 {
-          font-size: 1.9rem;
-        }
-
-        p {
-          font-size: 1.05rem;
-        }
-      } 
-
-      .bistro_description-buttons {
-        flex-direction: row;
-        justify-content: center;
-        gap: 1rem;
-        max-width: none;
-      }
-    }
-  */
-}
 
 .bistro_gallery .bistro_gallery-title {
   font-family: "Roboto", sans-serif;
@@ -866,6 +953,8 @@ body {
 .bistro_gallery .bistro_gallery-item:hover img, .bistro_gallery .bistro_gallery-item:focus-visible img {
   transform: scale(2);
   filter: brightness(1);
+}
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
