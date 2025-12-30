@@ -30,6 +30,46 @@
     text-decoration: none;
 }
 
+@media screen and (min-width: var.$bp-tablet-small) and (max-width: 767px) {
+    .header__img {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .header__nav {
+        display: block;
+    }
+
+    .header__menu-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header__menu-item {
+        display: none;
+    }
+
+    .movies {
+        display: block;
+    }
+
+    .menu-contact {
+        display: block;
+    }
+
+    .login {
+        display: block;
+    }
+
+    .header__dropdown {
+        display: none;
+    }
+}
+
 @media screen and (min-width: var.$bp-medium) {
     .menu-hide-medium {
         display: none;
