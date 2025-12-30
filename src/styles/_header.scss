@@ -118,4 +118,15 @@
     .header__menu-item {
         display: block;
     }
+
+    .language {
+        display: none;
+    }
 }
+
+@media screen and (min-width: var.$bp-desktop-full-menu2) {
+    .language {
+        display: block;
+    }
+}
+
