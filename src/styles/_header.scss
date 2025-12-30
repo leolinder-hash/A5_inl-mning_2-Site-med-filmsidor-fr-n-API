@@ -40,6 +40,13 @@
         justify-content: flex-start;
     }
 
+    .header__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
     .header__nav {
         display: block;
     }
