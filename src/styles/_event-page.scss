@@ -154,7 +154,7 @@
 }
 
 /* THIS IS THE SECTION FOR UPCOMING EVENTS */
-.lectures {
+.happenings__section {
   padding: 3rem 1rem;
   background: var.$bg;
 
@@ -162,27 +162,31 @@
   margin: 0 auto;
 }
 
-.lectures .lectures__headline,
-h2.lectures__headline {
-  margin: 0 0 1.25rem;
+.happening__headline {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0 1.25rem;
   font-size: 2rem;
   letter-spacing: -0.02em;
   color: var.$accent;
+  display: flex;
+  justify-content: center;
 }
 
-.lectures__list {
+.happenings__list {
   display: grid;
   gap: 1rem;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 48rem) {
-  .lectures__list {
+  .happenings__list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.25rem;
   }
 }
 
-.lecture-card {
+.happenings__card {
   background: var.$surface;
   border: 1px solid var.$border;
   border-radius: var.$radius;
@@ -191,7 +195,7 @@ h2.lectures__headline {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
-.lecture-card::before {
+.happenings__card::before {
   content: "";
   position: absolute;
   left: 0;
@@ -203,13 +207,13 @@ h2.lectures__headline {
   opacity: 0.9;
 }
 
-.lecture-card:hover {
+.happenings__card:hover {
   transform: translateY(-0.15rem);
   box-shadow: var.$shadow;
   border-color: var.$accent-soft;
 }
 
-.lecture-card__title {
+.happenings-card__title {
   margin: 0 0 0.75rem;
   padding-left: 0.25rem;
   font-size: 1.2rem;
@@ -218,25 +222,25 @@ h2.lectures__headline {
   color: var.$text;
 }
 
-.lecture-card__description {
+.happenings-card__description {
   margin: 0 0 0.35rem;
   color: var.$muted;
   line-height: 1.65;
   font-weight: 600;
 }
 
-.lecture-card__description:last-of-type {
+.happenings-card__description:last-of-type {
   margin-bottom: 0.9rem;
 }
 
-.lectures .btn.lecture-card__button {
+.happenings-card__button {
   width: 100%;
   background-color: var.$accent;
   border-color: var.$accent;
   color: #fff;
 }
 
-.lectures .btn.lecture-card__button:hover {
+.happenings-card__button:hover {
   background-color: var.$color-btn-menu-hover;
   border-color: var.$color-btn-menu-hover;
 }
@@ -260,5 +264,4 @@ h2.lectures__headline {
   .events__moreBtn {
     margin: 1rem auto 0;
   }
-
 }
