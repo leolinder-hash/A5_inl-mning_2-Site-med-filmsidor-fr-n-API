@@ -1,5 +1,4 @@
 /* THIS FILE IS FOR STYLING OF THE EVENTS-PAGE */
-
 @use 'variables' as var;
 @use 'components';
 
@@ -152,6 +151,94 @@
 
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+}
+
+/* THIS IS THE SECTION FOR UPCOMING EVENTS */
+.lectures {
+  padding: 3rem 1rem;
+  background: var.$bg;
+
+  max-width: var.$container;
+  margin: 0 auto;
+}
+
+.lectures .lectures__headline,
+h2.lectures__headline {
+  margin: 0 0 1.25rem;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  color: var.$accent;
+}
+
+.lectures__list {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .lectures__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+.lecture-card {
+  background: var.$surface;
+  border: 1px solid var.$border;
+  border-radius: var.$radius;
+  padding: 1.25rem 1.25rem 1.1rem;
+  position: relative;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.lecture-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  border-radius: var.$radius 0 0 var.$radius;
+  background: var.$accent;
+  opacity: 0.9;
+}
+
+.lecture-card:hover {
+  transform: translateY(-0.15rem);
+  box-shadow: var.$shadow;
+  border-color: var.$accent-soft;
+}
+
+.lecture-card__title {
+  margin: 0 0 0.75rem;
+  padding-left: 0.25rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 800;
+  color: var.$text;
+}
+
+.lecture-card__description {
+  margin: 0 0 0.35rem;
+  color: var.$muted;
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+.lecture-card__description:last-of-type {
+  margin-bottom: 0.9rem;
+}
+
+.lectures .btn.lecture-card__button {
+  width: 100%;
+  background-color: var.$accent;
+  border-color: var.$accent;
+  color: #fff;
+}
+
+.lectures .btn.lecture-card__button:hover {
+  background-color: var.$color-btn-menu-hover;
+  border-color: var.$color-btn-menu-hover;
 }
 
 /* THIS IS BREAKPOINTS FOR TABLET AND DESKTOP */
