@@ -17,7 +17,7 @@
         position: absolute;
         transform: translateY(-70px);
         padding-left: 1em;
-        color: white;
+        color: #821818;
         font-size: 1.8rem;
 
         @media (min-width: $bp-medium) {
@@ -77,7 +77,7 @@
 
     &__hours-title {
         font-size: 2rem;
-        color: white;
+        color: #821818;
         margin-bottom: 4rem;
         text-align: center;
 
@@ -89,20 +89,20 @@
 
     &__cinema-title,
     &__bistro-title {
-        color: white;
+        color: #f3543b;
         font-size: 1.5rem;
         font-weight: bold;
     }
 
     &__cinema-hours-list {
-        color: white;
+        color: #f3543b;
         list-style: none;
         padding: 0 0 4rem;
         line-height: 1.7;
     }
 
     &__bistro-hours-list {
-        color: white;
+        color: #f3543b;
         list-style: none;
         padding: 0;
         line-height: 1.7;
@@ -128,7 +128,8 @@
         padding: 2rem 0 1rem;
     }
 
-    &__bistro-img {
+    &__bistro-section-img {
+        display: block;
         width: 100%;
         height: auto;
 
@@ -155,7 +156,6 @@
         display: flex;
         justify-content: center;
         gap: 1rem;
-        padding: 1rem 2rem 4rem;
     }
 
     &__se-meny,
@@ -173,12 +173,13 @@
 
     &__faq {
         padding: 2rem 2rem;
-        background-color: $color-background-light;
+        background-color: $color-background-dark;
     }
 
     &__faq-title {
         font-size: 2rem;
         margin-bottom: 2rem;
+        color: #821818;
     }
 
     &__faq-item {
@@ -186,16 +187,18 @@
         margin-bottom: 1rem;
         padding: 1rem;
     }
-
+    
     &__faq-question {
         cursor: pointer;
         font-weight: bold;
         list-style: none;
+        color: #c5f198;
     }
 
     &__faq-answer {
         margin-top: 1rem;
         line-height: 1.6;
+        color: #f3543b;
     }
 
 }
