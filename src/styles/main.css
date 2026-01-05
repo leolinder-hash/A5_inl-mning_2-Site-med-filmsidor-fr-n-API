@@ -674,7 +674,7 @@ body.page--contact {
   position: absolute;
   transform: translateY(-70px);
   padding-left: 1em;
-  color: white;
+  color: #821818;
   font-size: 1.8rem;
 }
 @media (min-width: 768px) {
@@ -731,7 +731,7 @@ body.page--contact {
 }
 .about__hours-title {
   font-size: 2rem;
-  color: white;
+  color: #821818;
   margin-bottom: 4rem;
   text-align: center;
 }
@@ -742,18 +742,18 @@ body.page--contact {
   }
 }
 .about__cinema-title, .about__bistro-title {
-  color: white;
+  color: #f3543b;
   font-size: 1.5rem;
   font-weight: bold;
 }
 .about__cinema-hours-list {
-  color: white;
+  color: #f3543b;
   list-style: none;
   padding: 0 0 4rem;
   line-height: 1.7;
 }
 .about__bistro-hours-list {
-  color: white;
+  color: #f3543b;
   list-style: none;
   padding: 0;
   line-height: 1.7;
@@ -774,12 +774,13 @@ body.page--contact {
   font-weight: bold;
   padding: 2rem 0 1rem;
 }
-.about__bistro-img {
+.about__bistro-section-img {
+  display: block;
   width: 100%;
   height: auto;
 }
 @media (min-width: 768px) {
-  .about__bistro-img {
+  .about__bistro-section-img {
     width: 80%;
     height: auto;
     margin: 0 auto;
@@ -801,7 +802,6 @@ body.page--contact {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem 2rem 4rem;
 }
 .about__se-meny, .about__boka-bord {
   display: flex;
@@ -816,11 +816,12 @@ body.page--contact {
 }
 .about__faq {
   padding: 2rem 2rem;
-  background-color: #fbfbfa;
+  background-color: #151313;
 }
 .about__faq-title {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #821818;
 }
 .about__faq-item {
   border: 1px solid #ccc;
@@ -831,10 +832,12 @@ body.page--contact {
   cursor: pointer;
   font-weight: bold;
   list-style: none;
+  color: #c5f198;
 }
 .about__faq-answer {
   margin-top: 1rem;
   line-height: 1.6;
+  color: #f3543b;
 }
 
 .footer {
