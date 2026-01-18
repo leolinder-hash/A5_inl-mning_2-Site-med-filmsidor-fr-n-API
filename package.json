@@ -1,25 +1,30 @@
 {
-  "name": "kino-page",
+  "name": "A5-inlamning",
   "version": "1.0.0",
-  "description": "Grupparbeta KINO grupp B",
+  "description": "Individuell uppgift med SSR och API",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch --no-source-map src/styles/main.scss src/styles/main.css"
+    "sass": "sass --watch --no-source-map src/styles/main.scss src/styles/main.css",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ReposByHussam/kino-page.git"
+    "url": "git+https://github.com/leolinder-hash/A5_inl-mning_2-Site-med-filmsidor-fr-n-API.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ReposByHussam/kino-page/issues"
+    "url": "https://github.com/leolinder-hash/A5_inl-mning_2-Site-med-filmsidor-fr-n-API.git"
   },
   "homepage": "https://github.com/ReposByHussam/kino-page#readme",
   "devDependencies": {
     "concurrently": "^9.2.1",
     "sass": "^1.97.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }
