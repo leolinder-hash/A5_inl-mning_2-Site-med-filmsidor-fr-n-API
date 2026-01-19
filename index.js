@@ -1,41 +1,34 @@
 import express from "express";
-import fs from "fs/promises";
+import { engine } from "express-handlebars";
 
 const app = express();
 
+
+app.engine('hbs', engine({ extname: '.hbs' }));
+app.set('view engine', 'hbs');
+app.set('views', './views');
+
+
 app.use(express.static('src'));
 
-async function renderPage (page) {
-const layout = await fs.readFile('./templates/layout.html', 'utf-8');
-const content = await fs.readFile(`./content/${page}.html`, 'utf-8');
-
-const html = layout.replace('::content::', content);
-return html;
-}
-
-app.get('/', async (req, res) => {
-const html = await renderPage('home');
-res.send(html);
+app.get('/', (req, res) => {
+  res.render('home');
 });
 
-app.get('/about', async (req, res) => {
-const html = await renderPage('about');
-res.send(html);
+app.get('/about', (req, res) => {
+  res.render('about');
 });
 
-app.get('/bistro', async (req, res) => {
-const html = await renderPage('bistro');
-res.send(html);
+app.get('/bistro', (req, res) => {
+  res.render('bistro');
 });
 
-app.get('/contact', async (req, res) => {
-const html = await renderPage('contact');
-res.send(html);
+app.get('/contact', (req, res) => {
+  res.render('contact');
 });
 
-app.get('/event', async (req, res) => {
-const html = await renderPage('event');
-res.send(html);
+app.get('/event', (req, res) => {
+  res.render('event');
 });
 
 app.listen(5080, () => {
