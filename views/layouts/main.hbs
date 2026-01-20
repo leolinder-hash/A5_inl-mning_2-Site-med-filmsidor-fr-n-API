@@ -30,10 +30,10 @@
       <a href="/">
         <img class="header__img" src="/pics/KINO-logo.png" alt="Logo" />
       </a>
-      <nav>
+      <nav class="main-nav">
         <ul>
           {{#each menu}}
-          <li>
+          <li class='{{#if (eq id ../currentPage)}}active{{/if}}'>
             <a href='{{path}}'>{{label}} </a>
           </li>
           {{/each}}
