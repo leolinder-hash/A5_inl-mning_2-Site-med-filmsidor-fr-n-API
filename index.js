@@ -12,7 +12,6 @@ const MENU = [
   { id: 'contact', label: 'Kontakta oss', path: '/contact' }
 ]
 
-
 app.engine('hbs',
   engine({
     extname: '.hbs',
@@ -23,7 +22,7 @@ app.engine('hbs',
     }
   }
   ));
-  
+
 app.set('view engine', 'hbs');
 app.set('views', './views');
 
@@ -37,12 +36,35 @@ app.get('/', (req, res) => {
   });
 });
 
-/* app.get('/movies', (req, res) => {
+app.get('/movies', async (req, res) => {
+  const response = await fetch(
+    'https://plankton-app-xhkom.ondigitalocean.app/api/movies'
+  );
+
+  const result = await response.json();
+
   res.render('movies', {
+    movies: result.data,
     menu: MENU,
     currentPage: 'movies'
   });
-}); */
+});
+
+app.get('/movies/:id', async (req, res) =>{
+  const {id} = req.params;
+
+  const response = await fetch(
+    `https://plankton-app-xhkom.ondigitalocean.app/api/movies/${id}`
+  );
+
+  const result = await response.json();
+
+  res.render('movie', {
+    movie: result.data,
+    menu: MENU,
+    currentPage: 'movie'
+  });
+})
 
 
 app.get('/about', (req, res) => {

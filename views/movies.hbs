@@ -1,0 +1,13 @@
+<h1>Filmer</h1>
+
+
+<ul class="all-movies">
+  {{#each movies }}
+  <li class="movie-item">
+    <a href="/movies/{{id}}">
+      <h2>{{attributes.title}}</h2>
+    </a>
+    <p>{{attributes.intro}}</p>
+  </li>
+  {{/each}}
+</ul>
