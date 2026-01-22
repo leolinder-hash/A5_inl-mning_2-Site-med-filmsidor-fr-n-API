@@ -58,14 +58,15 @@ app.get('/movies/:id', async (req, res) =>{
   );
 
   const result = await response.json();
+  const imageURL = result.data.attributes.image?.url ?? null;
 
   res.render('movie', {
     movie: result.data,
+    imageURL: imageURL,
     menu: MENU,
     currentPage: 'movie'
   });
 })
-
 
 app.get('/about', (req, res) => {
   res.render('about', {
