@@ -58,6 +58,12 @@ app.get('/movies/:id', async (req, res) => {
     `https://plankton-app-xhkom.ondigitalocean.app/api/movies/${id}`
   );
 
+  if(!response.ok){
+    return res.status(404).render('404', {
+      title: 'Filmen kunde tyvärr inte hittas'
+    });
+  };
+
   const result = await response.json();
   const imageURL = result.data.attributes.image?.url ?? null;
   const movieData = result.data.attributes;
