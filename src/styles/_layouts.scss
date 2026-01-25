@@ -5,3 +5,13 @@
 color: red;
 font-weight: bold;
 }
+
+.movies_headline{
+  display: flex;
+  justify-content: center;
+}
+
+.movie_images{
+  width: 100%;
+  max-width: 30%;
+}

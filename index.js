@@ -50,8 +50,8 @@ app.get('/movies', async (req, res) => {
   });
 });
 
-app.get('/movies/:id', async (req, res) =>{
-  const {id} = req.params;
+app.get('/movies/:id', async (req, res) => {
+  const { id } = req.params;
 
   const response = await fetch(
     `https://plankton-app-xhkom.ondigitalocean.app/api/movies/${id}`
@@ -96,7 +96,11 @@ app.get('/event', (req, res) => {
   });
 });
 
-app.listen(5080, () => {
-  console.log('server kör på http://localhost:5080')
-});
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(5080, () => {
+    console.log('server kör på http://localhost:5080')
+  });
+};
+
+export default app;
 
