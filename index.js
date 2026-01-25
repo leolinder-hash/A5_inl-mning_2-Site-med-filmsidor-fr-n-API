@@ -1,5 +1,6 @@
 import express from "express";
 import { engine } from "express-handlebars";
+import { marked } from "marked";
 
 const app = express();
 
@@ -59,9 +60,14 @@ app.get('/movies/:id', async (req, res) => {
 
   const result = await response.json();
   const imageURL = result.data.attributes.image?.url ?? null;
+  const movieData = result.data.attributes;
+  const introHtml = marked(movieData.intro);
 
   res.render('movie', {
-    movie: result.data,
+    movie: {
+      ...movieData,
+      introHtml
+    },
     imageURL: imageURL,
     menu: MENU,
     currentPage: 'movie'

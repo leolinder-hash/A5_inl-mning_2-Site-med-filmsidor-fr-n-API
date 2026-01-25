@@ -1,5 +1,7 @@
-<h2>{{movie.attributes.title}}</h2>
-<p>{{movie.attributes.intro}}</p>
+<h2>{{movie.title}}</h2>
+<div class="movie-intro">
+  {{{movie.introHtml}}}
+</div>
 {{#if imageURL}}
-<img src='{{imageURL}}' class="movie_images" alt='{{movie.attributes.title}}'>
+<img src='{{imageURL}}' class="movie_images" alt='{{movie.title}}'>
 {{/if}}
